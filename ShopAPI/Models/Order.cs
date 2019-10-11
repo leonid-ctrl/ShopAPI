@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using ShopDbAccess.Logic;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ShopDbAccess.Models

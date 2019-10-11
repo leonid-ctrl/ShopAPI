@@ -1,4 +1,5 @@
-﻿using ShopDbAccess.Models;
+﻿using ShopDbAccess.Logic;
+using ShopDbAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -27,8 +28,9 @@ namespace ShopDbAccess.DAL
 
         public void CreateOrder(Order order)
         {
-            if (ShopDbAccess.Logic.OrderValidator.IsOrderValid(order))
+            if (OrderValidator.IsOrderValid(order))
             {
+                OrderValidator.CalcTotal(order);
                 context.Orders.Add(order);
             }
         }
@@ -41,8 +43,9 @@ namespace ShopDbAccess.DAL
 
         public void UpdateOrder(Order order)
         {
-            if (ShopDbAccess.Logic.OrderValidator.IsOrderValid(order))
+            if (OrderValidator.IsOrderValid(order))
             {
+                OrderValidator.CalcTotal(order);
                 context.Entry(order).State = EntityState.Modified;
             }
         }

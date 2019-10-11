@@ -9,6 +9,15 @@ namespace ShopDbAccessUnitTests
     [TestClass]
     public class Tests
     {
+        Order mixedSmallOrder = new Order()
+        {
+            OrdersMerchandise = new List<Merchandise> { ShopInitializer.MerchandiseList[0], ShopInitializer.MerchandiseList[1],
+                ShopInitializer.MerchandiseList[2], ShopInitializer.MerchandiseList[3], ShopInitializer.MerchandiseList[4],
+                ShopInitializer.MerchandiseList[5], ShopInitializer.MerchandiseList[6], ShopInitializer.MerchandiseList[7],
+                ShopInitializer.MerchandiseList[8], ShopInitializer.MerchandiseList[9] }
+        };
+        Order minimalOrder = new Order { OrdersMerchandise = new List<Merchandise> { ShopInitializer.MerchandiseList[0] } };
+
         [TestMethod]
         public void IsOrderWithMaxArticlesAndQuantityValid_True()
         {
@@ -56,13 +65,33 @@ namespace ShopDbAccessUnitTests
         [TestMethod]
         public void IsMixedSmallOrderValid_True()
         {
-            Assert.IsTrue(OrderValidator.IsOrderValid(new Order
+            Assert.IsTrue(OrderValidator.IsOrderValid(mixedSmallOrder));
+        }
+
+        [TestMethod]
+        public void isMinimalOrderValid_True()
+        {
+            Assert.IsTrue(OrderValidator.IsOrderValid(minimalOrder));
+        }
+
+        [TestMethod]
+        public void IsOrderMixedSmallOrderTotalCalculatedCorrectly_True()
+        {
+            double expectedTotal = 0;
+            OrderValidator.CalcTotal(mixedSmallOrder);
+            foreach (Merchandise merchandise in mixedSmallOrder.OrdersMerchandise)
             {
-                OrdersMerchandise = new List<Merchandise> { ShopInitializer.MerchandiseList[0], ShopInitializer.MerchandiseList[1],
-                ShopInitializer.MerchandiseList[2], ShopInitializer.MerchandiseList[3], ShopInitializer.MerchandiseList[4],
-                ShopInitializer.MerchandiseList[5], ShopInitializer.MerchandiseList[6], ShopInitializer.MerchandiseList[7],
-                ShopInitializer.MerchandiseList[8], ShopInitializer.MerchandiseList[9] }
-            }));
+                expectedTotal = +merchandise.Price;
+            }
+            Assert.AreEqual(expectedTotal, mixedSmallOrder.OrderTotal);
+        }
+
+        [TestMethod]
+        public void IsNewMinimalOrderTotalCalculatedCorrectly_True()
+        {
+            double expectedTotal = ShopInitializer.MerchandiseList[0].Price;
+            OrderValidator.CalcTotal(minimalOrder);
+            Assert.AreEqual(expectedTotal, minimalOrder.OrderTotal);
         }
     }
 }

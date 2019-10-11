@@ -1,4 +1,3 @@
-C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\obj\Debug\ShopAPI.csprojAssemblyReference.cache
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\bin\ShopAPI.dll.config
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\bin\ShopAPI.dll
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\bin\ShopAPI.pdb
@@ -68,5 +67,4 @@ C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\bin\Microsoft.CodeDom.Providers.Dot
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\obj\Debug\ShopAPI.csproj.CopyComplete
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\obj\Debug\ShopAPI.dll
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\obj\Debug\ShopAPI.pdb
-C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\bin\ShopAPI.dll.CodeAnalysisLog.xml
-C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\bin\ShopAPI.dll.lastcodeanalysissucceeded
+C:\Users\Leonid\source\repos\ShopAPI\ShopAPI\obj\Debug\ShopAPI.csprojAssemblyReference.cache

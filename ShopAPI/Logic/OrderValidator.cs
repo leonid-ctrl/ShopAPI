@@ -34,5 +34,14 @@ namespace ShopDbAccess.Logic
             Console.WriteLine("Can only create non-empty orders with up to 10 goods in it.");
             return false;
         }
+
+
+        public static void CalcTotal(Order order)
+        {
+            foreach (Merchandise merchandise in order.OrdersMerchandise)
+            {
+                order.OrderTotal =+ merchandise.Price;
+            }
+        }
     }
 }

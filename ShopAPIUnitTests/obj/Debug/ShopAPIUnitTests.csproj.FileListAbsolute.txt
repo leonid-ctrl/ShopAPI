@@ -23,5 +23,3 @@ C:\Users\Leonid\source\repos\ShopAPI\ShopAPIUnitTests\obj\Debug\ShopAPIUnitTests
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPIUnitTests\obj\Debug\ShopAPIUnitTests.csproj.CopyComplete
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPIUnitTests\obj\Debug\ShopAPIUnitTests.dll
 C:\Users\Leonid\source\repos\ShopAPI\ShopAPIUnitTests\obj\Debug\ShopAPIUnitTests.pdb
-C:\Users\Leonid\source\repos\ShopAPI\ShopAPIUnitTests\bin\Debug\ShopAPIUnitTests.dll.CodeAnalysisLog.xml
-C:\Users\Leonid\source\repos\ShopAPI\ShopAPIUnitTests\bin\Debug\ShopAPIUnitTests.dll.lastcodeanalysissucceeded
